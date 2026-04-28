@@ -9,9 +9,9 @@
 <meta name="author" content="Hatem Abdelfatah"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://hatemabdelfatah.github.io/my-portfolio/"/>
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="apple-touch-icon" href="favicon.png"/>
+<!-- Favicon (embedded – no separate file needed) -->
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7klEQVR4nGNkYeX4zzCAgIWBgYHhz+OigbFctg/iABiHngDmaSa62ooFjDpg1AGjDiDZAX+PJDH8eVzE8K/dBS7230+d4c/jIkjeFuWmrQNg4J9/CsO/kskY4n823mdgEBKnvQOoBUYdwEJYCQ7Ae4rhXz4Dw798ymrSIRwCn80YGN76Q9jclxgYRFeSZQxFIcC0cQ4Diy0nA3NDHPlmUOIAaoBRB5DsAGabeQyMR5MRCZCBgYFx000G5oTHDAwPWhkY/vKSZB5ZuYA5QhtDjHHvagaWvatJNmvoRcGoA0YdQG0Az4YD1UFlHOjuOQCcrTQVnoExYQAAAABJRU5ErkJggg=="/>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7klEQVR4nGNkYeX4zzCAgIWBgYHhz+OigbFctg/iABiHngDmaSa62ooFjDpg1AGjDiDZAX+PJDH8eVzE8K/dBS7230+d4c/jIkjeFuWmrQNg4J9/CsO/kskY4n823mdgEBKnvQOoBUYdwEJYCQ7Ae4rhXz4Dw798ymrSIRwCn80YGN76Q9jclxgYRFeSZQxFIcC0cQ4Diy0nA3NDHPlmUOIAaoBRB5DsAGabeQyMR5MRCZCBgYFx000G5oTHDAwPWhkY/vKSZB5ZuYA5QhtDjHHvagaWvatJNmvoRcGoA0YdQG0Az4YD1UFlHOjuOQCcrTQVnoExYQAAAABJRU5ErkJggg=="/>
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="ar_EG"/>
@@ -268,88 +268,6 @@
     .hero-sub{font-size:1rem}
     .hero-ece{display:none}
     nav{padding:.7rem 1rem}
-  }
-
-  /* ===== MOBILE RESPONSIVENESS PATCH ===== */
-
-  /* Prevent horizontal scroll globally */
-  html,body{overflow-x:hidden}
-
-  /* Hero overflow guard (glitch animation can bleed) */
-  #hero{overflow:hidden}
-  .hero-inner{width:100%;max-width:100%}
-
-  @media(max-width:768px){
-    /* Hide ECE label on mobile – it overlaps the hamburger button */
-    .hero-ece{display:none}
-
-    /* Terminal block: scrollable instead of overflowing */
-    .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
-    .tbody{font-size:.8rem;line-height:1.9;overflow-x:auto;white-space:nowrap}
-
-    /* Experience & Education sections – reduce padding to match others */
-    #experience{padding:4rem 0 0}
-    #education{padding:2rem 0 4rem}
-    #contact{padding:4rem 0 5rem}
-
-    /* Less gap between section heading and content */
-    .sh{margin-bottom:2rem}
-
-    /* Contact links – break long email/phone strings */
-    .citem{word-break:break-all;overflow-wrap:break-word}
-
-    /* Tool grid – smaller min so chips don't overflow */
-    .tg{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}
-
-    /* Timeline items – less bottom gap */
-    .tli{margin-bottom:2rem}
-
-    /* Nav logo – smaller on narrow screens */
-    .nav-logo{font-size:1rem}
-
-    /* Skills legend wraps tightly */
-    .skill-legend{gap:.6rem}
-
-    /* Project cards – no upward shift on hover (feels bad on touch) */
-    .pc:hover{transform:none}
-  }
-
-  @media(max-width:480px){
-    /* Skill chips – smaller so they fit */
-    .chip{font-size:.62rem;padding:.15rem .4rem}
-    .sdk-chips{gap:.2rem}
-
-    /* Contact links – stack vertically, centred */
-    .clinks{flex-direction:column;align-items:center}
-    .citem{width:100%;justify-content:center;text-align:center}
-
-    /* Tags row */
-    .tag{font-size:.65rem;padding:.18rem .4rem}
-    .tags{gap:.22rem}
-
-    /* Terminal font – even smaller on very narrow */
-    .tbody{font-size:.7rem;line-height:1.8}
-
-    /* Course cards – stack icon above text */
-    .cc{flex-direction:column;gap:.45rem}
-    .cb{width:100%;height:30px;font-size:.68rem}
-
-    /* Stats grid – keep 2-col but shrink padding */
-    .sc{padding:.6rem .75rem}
-    .sn2{font-size:1.5rem}
-
-    /* Section number label */
-    .sn{font-size:.76rem}
-
-    /* Footer */
-    .footer-links{gap:.55rem}
-    .footer-bottom{font-size:.6rem;letter-spacing:.04em}
-
-    /* Hero pre – tighten */
-    .hero-pre{font-size:.8rem;margin-bottom:1rem}
-
-    /* Reduce section divider margin */
-    .div{margin:2.5rem 0}
   }
 </style>
 </head>
