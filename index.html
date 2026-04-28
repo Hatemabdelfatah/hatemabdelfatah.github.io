@@ -9,9 +9,9 @@
 <meta name="author" content="Hatem Abdelfatah"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://hatemabdelfatah.github.io/my-portfolio/"/>
-<!-- Favicon (embedded – no separate file needed) -->
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7klEQVR4nGNkYeX4zzCAgIWBgYHhz+OigbFctg/iABiHngDmaSa62ooFjDpg1AGjDiDZAX+PJDH8eVzE8K/dBS7230+d4c/jIkjeFuWmrQNg4J9/CsO/kskY4n823mdgEBKnvQOoBUYdwEJYCQ7Ae4rhXz4Dw798ymrSIRwCn80YGN76Q9jclxgYRFeSZQxFIcC0cQ4Diy0nA3NDHPlmUOIAaoBRB5DsAGabeQyMR5MRCZCBgYFx000G5oTHDAwPWhkY/vKSZB5ZuYA5QhtDjHHvagaWvatJNmvoRcGoA0YdQG0Az4YD1UFlHOjuOQCcrTQVnoExYQAAAABJRU5ErkJggg=="/>
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7klEQVR4nGNkYeX4zzCAgIWBgYHhz+OigbFctg/iABiHngDmaSa62ooFjDpg1AGjDiDZAX+PJDH8eVzE8K/dBS7230+d4c/jIkjeFuWmrQNg4J9/CsO/kskY4n823mdgEBKnvQOoBUYdwEJYCQ7Ae4rhXz4Dw798ymrSIRwCn80YGN76Q9jclxgYRFeSZQxFIcC0cQ4Diy0nA3NDHPlmUOIAaoBRB5DsAGabeQyMR5MRCZCBgYFx000G5oTHDAwPWhkY/vKSZB5ZuYA5QhtDjHHvagaWvatJNmvoRcGoA0YdQG0Az4YD1UFlHOjuOQCcrTQVnoExYQAAAABJRU5ErkJggg=="/>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="ar_EG"/>
@@ -80,27 +80,27 @@
   .nav-cta:hover{background:rgba(0,232,122,.12)}
 
   section{position:relative;z-index:2}
-  .container{max-width:1100px;margin:0 auto;padding:0 2rem}
+  .container{max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;width:100%}
 
   /* HERO */
   #hero{min-height:100vh;display:flex;align-items:center;padding:6rem 0 4rem;position:relative;z-index:2}
-  .hero-inner{max-width:1200px;padding:0 2rem}
+  .hero-inner{max-width:1200px;padding:0 2rem;box-sizing:border-box;width:100%}
   .hero-pre{font-family:var(--mono);font-size:.92rem;color:var(--green);letter-spacing:.2em;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
   .hero-pre::before{content:'';display:block;width:2rem;height:1px;background:var(--green)}
   .hero-name{font-family:var(--head);font-size:clamp(2.6rem,6.5vw,5.8rem);font-weight:800;color:var(--text-bright);line-height:1;letter-spacing:-.02em;margin-bottom:.5rem}
   .glitch{position:relative;display:inline-block}
   .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;font-family:inherit;font-size:inherit;font-weight:inherit;color:inherit}
-  .glitch::before{color:var(--cyan);clip:rect(0,900px,0,0);animation:g1 3.5s infinite linear;left:2px}
-  .glitch::after{color:var(--red);clip:rect(0,900px,0,0);animation:g2 3.5s infinite linear;left:-2px}
-  @keyframes g1{0%,94%,100%{clip:rect(0,900px,0,0);transform:translate(0)}95%{clip:rect(20px,900px,60px,0);transform:translate(-2px,0)}96%{clip:rect(70px,900px,100px,0);transform:translate(2px,0)}97%{clip:rect(10px,900px,40px,0);transform:translate(-1px,0)}98%,99%{clip:rect(0,900px,0,0)}}
-  @keyframes g2{0%,96%,100%{clip:rect(0,900px,0,0);transform:translate(0)}97%{clip:rect(50px,900px,80px,0);transform:translate(2px,0)}98%{clip:rect(15px,900px,35px,0);transform:translate(-2px,0)}99%{clip:rect(0,900px,0,0)}}
-  .hero-sub{font-family:var(--head);font-size:clamp(1.2rem,3vw,2.2rem);font-weight:700;background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem;white-space:nowrap}
+  .glitch::before{color:var(--cyan);clip:rect(0,100vw,0,0);animation:g1 3.5s infinite linear;left:2px}
+  .glitch::after{color:var(--red);clip:rect(0,100vw,0,0);animation:g2 3.5s infinite linear;left:-2px}
+  @keyframes g1{0%,94%,100%{clip:rect(0,100vw,0,0);transform:translate(0)}95%{clip:rect(20px,100vw,60px,0);transform:translate(-2px,0)}96%{clip:rect(70px,100vw,100px,0);transform:translate(2px,0)}97%{clip:rect(10px,100vw,40px,0);transform:translate(-1px,0)}98%,99%{clip:rect(0,100vw,0,0)}}
+  @keyframes g2{0%,96%,100%{clip:rect(0,100vw,0,0);transform:translate(0)}97%{clip:rect(50px,100vw,80px,0);transform:translate(2px,0)}98%{clip:rect(15px,100vw,35px,0);transform:translate(-2px,0)}99%{clip:rect(0,100vw,0,0)}}
+  .hero-sub{font-family:var(--head);font-size:clamp(1rem,4vw,2.2rem);font-weight:700;background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem;white-space:normal;word-break:break-word}
   .tw-wrap{font-family:var(--mono);font-size:1.05rem;color:var(--text-dim);margin-bottom:2.5rem;min-height:1.85rem}
   .tw-wrap .cur{display:inline-block;width:2px;height:1.1rem;background:var(--green);margin-left:2px;animation:blink .8s infinite;vertical-align:middle}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
   .badges{display:flex;flex-wrap:nowrap;gap:.6rem;margin-bottom:2.5rem;overflow-x:auto;padding-bottom:.3rem;-ms-overflow-style:none;scrollbar-width:none}
   .badges::-webkit-scrollbar{display:none}
-  .badge{font-family:var(--mono);font-size:.82rem;border:1px solid var(--border);color:var(--text-dim);padding:.35rem .9rem;letter-spacing:.07em;background:rgba(0,232,122,.03);transition:all .2s;white-space:nowrap;flex-shrink:0}
+  .badge{font-family:var(--mono);font-size:.82rem;border:1px solid var(--border);color:var(--text-dim);padding:.35rem .9rem;letter-spacing:.07em;background:rgba(0,232,122,.03);transition:all .2s;white-space:normal;word-break:break-word}
   .badge:hover{border-color:var(--green);color:var(--green)}
   /* ECE label on hero top-right */
   .hero-ece{position:absolute;top:5.5rem;right:2rem;font-family:var(--mono);font-size:0.85rem;color:var(--cyan-dim);border:1px solid var(--border2);padding:.4rem .85rem;letter-spacing:.1em;background:rgba(0,200,255,.05);white-space:nowrap}
@@ -244,7 +244,7 @@
     .hero-name{font-size:clamp(2.4rem,11vw,3.5rem)}
     .hero-sub{font-size:clamp(1.05rem,5vw,1.4rem);white-space:normal}
     .tw-wrap{font-size:.88rem}
-    .badges{flex-wrap:nowrap;overflow-x:auto}
+    .badges{flex-wrap:wrap;overflow-x:hidden}
     .hero-btns{flex-direction:column;gap:.7rem}
     .btn-p,.btn-o{width:100%;text-align:center;padding:.75rem 1.2rem;font-size:.8rem}
     .ag,.skl,.cl{grid-template-columns:1fr}
@@ -264,10 +264,33 @@
     .scroll-hint{display:none}
   }
   @media(max-width:480px){
-    .hero-name{font-size:2.3rem}
-    .hero-sub{font-size:1rem}
-    .hero-ece{display:none}
+    html{font-size:14px}
     nav{padding:.7rem 1rem}
+    .hero-name{font-size:clamp(1.8rem,9vw,2.3rem);word-break:break-word}
+    .hero-sub{font-size:clamp(.9rem,4.5vw,1rem);white-space:normal;word-break:break-word}
+    .hero-ece{display:none}
+    .hero-inner{padding:0 1rem}
+    .container{padding:0 1rem}
+    .badge{font-size:.72rem;padding:.25rem .6rem;white-space:normal;word-break:break-word}
+    .badges{gap:.4rem}
+    .hero-btns{gap:.5rem}
+    .btn-p,.btn-o{font-size:.75rem;padding:.65rem 1rem}
+    .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+    .tbody{font-size:.72rem;white-space:pre;display:block;overflow-x:auto}
+    .chip{font-size:.62rem;padding:.15rem .4rem}
+    .sdk-chips{gap:.25rem}
+    .clinks{flex-direction:column;align-items:center}
+    .citem{width:100%;justify-content:center;text-align:center;word-break:break-all}
+    .tag{font-size:.65rem;padding:.18rem .4rem}
+    .tags{gap:.22rem}
+    .cc{flex-direction:column;gap:.45rem}
+    .sc{padding:.6rem .75rem}
+    .sn2{font-size:1.5rem}
+    .footer-links{gap:.55rem;flex-wrap:wrap;justify-content:center}
+    .footer-bottom{font-size:.6rem;letter-spacing:.04em;text-align:center}
+    .div{margin:2.5rem 0}
+    .pc:hover{transform:none}
+    .sg{grid-template-columns:1fr}
   }
 </style>
 </head>
