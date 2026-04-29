@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hatemabdelfatah.github.io/sitemap.xml
