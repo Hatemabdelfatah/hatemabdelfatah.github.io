@@ -87,7 +87,20 @@
 
   /* HERO */
   #hero{min-height:100vh;display:flex;align-items:center;padding:6rem 0 4rem;position:relative;z-index:2}
-  .hero-inner{max-width:1200px;padding:0 2rem;box-sizing:border-box;width:100%}
+  .hero-inner{max-width:1450px;padding:0 2rem;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:4rem;justify-content:space-between}
+  .hero-text{flex:1;min-width:0}
+  .hero-photo-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:1rem}
+  .hero-photo-frame{position:relative;width:260px;height:320px}
+  .hero-photo-frame::before{content:'';position:absolute;inset:-8px;border:1px solid var(--green);opacity:0.40;z-index:0}
+  .hero-photo-frame::after{content:'';position:absolute;inset:-16px;border:1px solid var(--cyan);opacity:0.20;z-index:0}
+  .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;position:relative;z-index:1;filter:grayscale(15%) contrast(1.05);transition:filter .3s}
+  .hero-photo:hover{filter:grayscale(0%) contrast(1.1)}
+  .hero-photo-corner{position:absolute;width:14px;height:14px;z-index:2}
+  .hero-photo-corner.tl{top:-2px;left:-2px;border-top:2px solid var(--green);border-left:2px solid var(--green)}
+  .hero-photo-corner.tr{top:-2px;right:-2px;border-top:2px solid var(--green);border-right:2px solid var(--green)}
+  .hero-photo-corner.bl{bottom:-2px;left:-2px;border-bottom:2px solid var(--green);border-left:2px solid var(--green)}
+  .hero-photo-corner.br{bottom:-2px;right:-2px;border-bottom:2px solid var(--green);border-right:2px solid var(--green)}
+  .hero-photo-label{font-family:var(--mono);font-size:.68rem;color:var(--text-dim);letter-spacing:.15em;text-transform:uppercase}
   .hero-pre{font-family:var(--mono);font-size:.92rem;color:var(--green);letter-spacing:.2em;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
   .hero-pre::before{content:'';display:block;width:2rem;height:1px;background:var(--green)}
   .hero-name{font-family:var(--head);font-size:clamp(2.6rem,6.5vw,5.8rem);font-weight:800;color:var(--text-bright);line-height:1;letter-spacing:-.02em;margin-bottom:.5rem}
@@ -166,8 +179,6 @@
   .tc2.cy:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,200,255,.07)}
 
   /* TIMELINE (shared) */
-  .tl{position:relative;padding-left:1.5rem}
-  .tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--green),transparent)}
   .tli{position:relative;margin-bottom:3rem;padding-left:1.5rem}
   .tli::before{content:'';position:absolute;left:-1.9rem;top:.5rem;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--green);box-shadow:0 0 8px var(--green)}
   .tld{font-family:var(--mono);font-size:.8rem;color:var(--green);letter-spacing:.1em;margin-bottom:.4rem}
@@ -242,7 +253,9 @@
     nav{padding:.75rem 1.2rem}
     .nav-links,.nav-cta{display:none}
     .nav-ham{display:flex}
-    .hero-inner{padding:0 1.2rem}
+    .hero-inner{padding:0 1.2rem;flex-direction:column-reverse;gap:2rem}
+    .hero-photo-wrap{width:100%;align-items:center}
+    .hero-photo-frame{width:160px;height:200px}
     .hero-ece{top:4.5rem;right:1.2rem;font-size:.65rem;padding:.3rem .6rem}
     .hero-name{font-size:clamp(2.4rem,11vw,3.5rem)}
     .hero-sub{font-size:clamp(1.05rem,5vw,1.4rem);white-space:normal}
@@ -334,6 +347,7 @@
 <section id="hero">
   <div class="hero-ece">// Electronics &amp; Communications Engineer</div>
   <div class="hero-inner">
+    <div class="hero-text">
     <div class="hero-pre">Available for opportunities</div>
     <h1 class="hero-name">
       <span class="glitch" data-text="Hatem">Hatem</span><br/>
@@ -355,6 +369,17 @@
       <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" class="btn-o">LinkedIn ↗</a>
     </div>
     <div class="scroll-hint">scroll</div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="assets/My_picture.png" alt="Hatem Abdelfatah" class="hero-photo"/>
+        <span class="hero-photo-corner tl"></span>
+        <span class="hero-photo-corner tr"></span>
+        <span class="hero-photo-corner bl"></span>
+        <span class="hero-photo-corner br"></span>
+      </div>
+      <div class="hero-photo-label">Hatem Abdelfatah</div>
+    </div>
   </div>
 </section>
 
