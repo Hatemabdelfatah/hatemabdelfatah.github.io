@@ -7,28 +7,15 @@
 <!-- ═══════════════════════════════════════════════
      PRIMARY SEO
 ════════════════════════════════════════════════ -->
-<title>Hatem Abdelfatah | حاتم عبدالفتاح — Penetration Tester & Fullstack Developer, Alexandria Egypt</title>
-<meta name="description" content="Hatem Abdelfatah (حاتم عبدالفتاح), Penetration Tester, Offensive Security Engineer & Fullstack Developer based in Alexandria, Egypt. Expert in web & network pentesting, OWASP Top 10, Burp Suite, Metasploit, FastAPI, Python & PHP. Available for internships and freelance opportunities."/>
-<meta name="keywords" content="
-  Hatem Abdelfatah, حاتم عبدالفتاح, حاتم عبد الفتاح, حاتم عبدالفتاح,
-  المهندس حاتم عبدالفتاح, حاتم عبدالفتاح مختبر اختراق, حاتم عبدالفتاح أمن سيبراني,
-  حاتم عبدالفتاح الاسكندرية, حاتم عبدالفتاح مطور, حاتم عبدالفتاح مبرمج,
-  penetration tester egypt, offensive security engineer egypt,
-  cybersecurity engineer alexandria egypt, ethical hacker egypt,
-  fullstack developer egypt, web penetration testing egypt,
-  network penetration testing, OWASP Top 10, Burp Suite Pro, Metasploit,
-  Python developer egypt, FastAPI developer, PHP developer egypt,
-  Hatem Abdelfatah github, Hatem Abdelfatah linkedin,
-  hatemabdelfatah, hatem abdel fatah, hatem abdelfattah,
-  مختبر اختراق مصر, أمن سيبراني مصر, مطور ويب الاسكندرية,
-  اختبار اختراق, أمن المعلومات مصر, مهندس أمن سيبراني
-"/>
+<title>Hatem Abdelfatah | Penetration Tester & Fullstack Developer</title>
+<meta name="description" content="Portfolio of Hatem Abdelfatah, an Alexandria-based penetration tester, offensive security engineer, and fullstack developer focused on web security, network testing, FastAPI, Python, PHP, and SQL."/>
+<meta name="keywords" content="Hatem Abdelfatah, حاتم عبدالفتاح, penetration tester Egypt, offensive security engineer, fullstack developer, web application security, network security, OWASP Top 10, FastAPI, Python, PHP"/>
 <meta name="author" content="Hatem Abdelfatah | حاتم عبدالفتاح"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <meta name="googlebot" content="index, follow"/>
 <meta name="rating" content="general"/>
-<meta name="revisit-after" content="7 days"/>
 <meta name="language" content="English, Arabic"/>
+<meta name="theme-color" content="#040508"/>
 
 <!-- ═══════════════════════════════════════════════
      GEO / LOCAL SEO
@@ -101,7 +88,6 @@
   "url": "https://hatemabdelfatah.github.io/",
   "image": "https://hatemabdelfatah.github.io/assets/og-image.jpg",
   "email": "hatemabdelfatah53@gmail.com",
-  "telephone": "+201201655325",
   "jobTitle": ["Penetration Tester", "Offensive Security Engineer", "Fullstack Developer", "مختبر اختراق", "مطور ويب"],
   "knowsAbout": [
     "Penetration Testing", "Web Application Security", "Network Security",
@@ -142,7 +128,7 @@
 </script>
 
 <!-- ═══════════════════════════════════════════════
-     SCHEMA.ORG — WEBSITE + SEARCHACTION
+     SCHEMA.ORG — WEBSITE
 ════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
@@ -188,6 +174,8 @@
   ::selection{background:var(--green);color:#000}
   a{color:var(--green);text-decoration:none;transition:color .2s}
   a:hover{color:var(--cyan)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;padding:0;margin:-1px}
   ::-webkit-scrollbar{width:4px}
   ::-webkit-scrollbar-track{background:var(--bg)}
   ::-webkit-scrollbar-thumb{background:var(--green-dim);border-radius:2px}
@@ -206,6 +194,7 @@
   .nav-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   /* MOBILE DRAWER */
   .nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,5,8,0.97);backdrop-filter:blur(20px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+  .nav-drawer[aria-hidden="true"]{display:none}
   .nav-drawer.open{display:flex}
   .nav-drawer a{font-family:var(--mono);font-size:1.1rem;color:var(--text-dim);letter-spacing:.15em;text-transform:uppercase;transition:color .2s}
   .nav-drawer a::before{content:attr(data-num);color:var(--green);margin-right:.5rem}
@@ -384,6 +373,14 @@
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .reveal.visible{opacity:1;transform:translateY(0)}
 
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    #matrix-canvas{display:none}
+    .reveal{opacity:1;transform:none}
+    .pc:hover{transform:none}
+  }
+
   @media(max-width:768px){
     html{font-size:15px}
     nav{padding:.75rem 1.2rem}
@@ -474,21 +471,21 @@
     <li><a href="#contact" data-num="07">Contact</a></li>
   </ul>
   <a href="mailto:hatemabdelfatah53@gmail.com" class="nav-cta">Hire Me</a>
-  <button class="nav-ham" id="hamBtn" aria-label="Menu">
+  <button class="nav-ham" id="hamBtn" type="button" aria-label="Open navigation menu" aria-controls="navDrawer" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILE DRAWER -->
-<div class="nav-drawer" id="navDrawer">
-  <a href="#about" data-num="01" onclick="closeDrawer()">About</a>
-  <a href="#skills" data-num="02" onclick="closeDrawer()">Skills</a>
-  <a href="#experience" data-num="03" onclick="closeDrawer()">Experience</a>
-  <a href="#education" data-num="04" onclick="closeDrawer()">Education</a>
-  <a href="#projects" data-num="05" onclick="closeDrawer()">Projects</a>
-  <a href="#courses" data-num="06" onclick="closeDrawer()">Courses</a>
-  <a href="#contact" data-num="07" onclick="closeDrawer()">Contact</a>
-  <a href="mailto:hatemabdelfatah53@gmail.com" class="nav-cta-m" onclick="closeDrawer()">Hire Me</a>
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <a href="#about" data-num="01">About</a>
+  <a href="#skills" data-num="02">Skills</a>
+  <a href="#experience" data-num="03">Experience</a>
+  <a href="#education" data-num="04">Education</a>
+  <a href="#projects" data-num="05">Projects</a>
+  <a href="#courses" data-num="06">Courses</a>
+  <a href="#contact" data-num="07">Contact</a>
+  <a href="mailto:hatemabdelfatah53@gmail.com" class="nav-cta-m">Hire Me</a>
 </div>
 
 <!-- HERO -->
@@ -513,8 +510,8 @@
     </div>
     <div class="hero-btns">
       <a href="#contact" class="btn-p">Get In Touch</a>
-      <a href="https://github.com/Hatemabdelfatah" target="_blank" class="btn-o">GitHub ↗</a>
-      <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" class="btn-o">LinkedIn ↗</a>
+      <a href="https://github.com/Hatemabdelfatah" target="_blank" rel="noopener noreferrer" class="btn-o">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" rel="noopener noreferrer" class="btn-o">LinkedIn ↗</a>
     </div>
     <div class="scroll-hint">scroll</div>
     </div>
@@ -725,7 +722,7 @@
         <div class="pn">Home Lab — Penetration Testing Environment</div>
         <div class="pd">Private cybersecurity lab using VMware to simulate real-world attack scenarios. Conducted network security assessments, privilege escalation exercises, web vulnerability testing, and full post-exploitation workflows on isolated targets.</div>
         <div class="tags" style="margin-bottom:1rem"><span class="tag">Kali Linux</span><span class="tag">VMware</span><span class="tag">Metasploit</span><span class="tag">Nmap</span><span class="tag">Burp Suite</span></div>
-        <div class="pl"><a href="https://github.com/Hatemabdelfatah/Penetration-Testing-Projects" target="_blank" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
+        <div class="pl"><a href="https://github.com/Hatemabdelfatah/Penetration-Testing-Projects" target="_blank" rel="noopener noreferrer" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
       </div>
 
       <!-- 2nd: SmartCart -->
@@ -734,7 +731,7 @@
         <div class="pn">SmartCart &amp; Smart Market — Full-Stack Commerce System</div>
         <div class="pd">End-to-end intelligent shopping system combining a real-time backend API (FastAPI + WebSocket) with a complete market management layer. Features JWT authentication, live cart tracking with position awareness, product search with popularity scoring, admin broadcast via WebSockets, inventory management, customer catalogues, automated offer handling, and a security-first architecture following OWASP practices throughout.</div>
         <div class="tags" style="margin-bottom:1rem"><span class="tag">FastAPI</span><span class="tag">WebSocket</span><span class="tag">SQLAlchemy</span><span class="tag">JWT Auth</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">OWASP</span></div>
-        <div class="pl"><a href="https://github.com/Hatemabdelfatah" target="_blank" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
+        <div class="pl"><a href="mailto:hatemabdelfatah53@gmail.com?subject=SmartCart%20project%20details" class="pla">Request Details</a></div>
       </div>
 
       <!-- 3rd: Pintos -->
@@ -743,7 +740,7 @@
         <div class="pn">Pintos — Operating System Implementation</div>
         <div class="pd">Extended the Pintos educational OS in C implementing thread scheduling, user programs, virtual memory, and a file system. Deep systems-level work that sharpens kernel exploitation understanding, privilege escalation techniques, and memory vulnerability research.</div>
         <div class="tags" style="margin-bottom:1rem"><span class="tag">C</span><span class="tag">OS Internals</span><span class="tag">Threads</span><span class="tag">Virtual Memory</span><span class="tag">File System</span></div>
-        <div class="pl"><a href="https://github.com/Hatemabdelfatah" target="_blank" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
+        <div class="pl"><a href="https://github.com/Hatemabdelfatah/PintOS-Project" target="_blank" rel="noopener noreferrer" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
       </div>
 
       <!-- 4th: OS Shell -->
@@ -752,7 +749,7 @@
         <div class="pn">Simple Shell with Multi-Processing</div>
         <div class="pd">Unix-like shell in C supporting multi-processing with fork/exec, pipelines, and signal handling. Core OS knowledge that directly informs privilege escalation and process injection research.</div>
         <div class="tags" style="margin-bottom:1rem"><span class="tag">C</span><span class="tag">Unix</span><span class="tag">fork/exec</span><span class="tag">Signals</span></div>
-        <div class="pl"><a href="https://github.com/Hatemabdelfatah/Simple-Shell-Multi-Processing-" target="_blank" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
+        <div class="pl"><a href="https://github.com/Hatemabdelfatah/Simple-Shell-Multi-Processing-" target="_blank" rel="noopener noreferrer" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
       </div>
 
       <!-- 5th: CalTrain -->
@@ -761,7 +758,7 @@
         <div class="pn">CalTrain — Synchronization &amp; Mutual Exclusion</div>
         <div class="pd">Solved a classic OS synchronization problem using semaphores and mutexes in C. Core knowledge for understanding race conditions and lock vulnerabilities — primitives at the heart of real-world exploit development.</div>
         <div class="tags" style="margin-bottom:1rem"><span class="tag">C</span><span class="tag">Semaphores</span><span class="tag">Mutexes</span><span class="tag">Race Conditions</span></div>
-        <div class="pl"><a href="https://github.com/Hatemabdelfatah/CalTrain-Synchronization-and-Mutual-Exclusion-" target="_blank" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
+        <div class="pl"><a href="https://github.com/Hatemabdelfatah/CalTrain-Synchronization-and-Mutual-Exclusion-" target="_blank" rel="noopener noreferrer" class="pla"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View on GitHub</a></div>
       </div>
 
       <!-- More on GitHub -->
@@ -769,7 +766,7 @@
         <div style="font-family:var(--mono);font-size:2rem;color:rgba(0,232,122,0.3)">&lt;/&gt;</div>
         <div class="pn" style="color:var(--text-dim)">More Projects on GitHub</div>
         <div class="pd" style="font-size:.85rem">Additional repositories including coursework, experiments, and ongoing work. Visit the full profile to explore everything.</div>
-        <a href="https://github.com/Hatemabdelfatah?tab=repositories" target="_blank" class="btn-o" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.5rem">View All Repos ↗</a>
+        <a href="https://github.com/Hatemabdelfatah?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-o" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.5rem">View All Repos ↗</a>
       </div>
 
     </div>
@@ -813,21 +810,20 @@
       <p class="cintro reveal">I'm actively looking for internships, part-time roles, and freelance opportunities in penetration testing and fullstack development. If you have a system to audit, a project to build, or just want to connect — reach out.</p>
       <div class="clinks reveal">
         <a href="mailto:hatemabdelfatah53@gmail.com" class="citem"><span class="dot"></span>hatemabdelfatah53@gmail.com</a>
-        <a href="tel:+201201655325" class="citem"><span class="dot"></span>+20 120 165 5325</a>
-        <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" class="citem"><span class="dot"></span>LinkedIn</a>
-        <a href="https://github.com/Hatemabdelfatah" target="_blank" class="citem"><span class="dot"></span>GitHub</a>
-        <a href="https://x.com/HatemAbdel70633" target="_blank" class="citem"><span class="dot"></span>Twitter / X</a>
+        <a href="mailto:hatemabdelfatah53@gmail.com?subject=Portfolio%20phone%20request" class="citem"><span class="dot"></span>Phone available on request</a>
+        <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" rel="noopener noreferrer" class="citem"><span class="dot"></span>LinkedIn</a>
+        <a href="https://github.com/Hatemabdelfatah" target="_blank" rel="noopener noreferrer" class="citem"><span class="dot"></span>GitHub</a>
+        <a href="https://x.com/HatemAbdel70633" target="_blank" rel="noopener noreferrer" class="citem"><span class="dot"></span>Twitter / X</a>
       </div>
       <div class="avail reveal"><div class="adot"></div>Available for new opportunities — Alexandria, Egypt</div>
     </div>
   </div>
 </section>
 
-<!-- Arabic SEO landmark — visible to crawlers, hidden visually -->
-<div lang="ar" aria-label="Arabic profile summary" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-  <h2>حاتم عبدالفتاح — مختبر اختراق ومطور ويب</h2>
-  <p>حاتم عبدالفتاح مهندس أمن سيبراني ومطور ويب متكامل من الاسكندرية، مصر. متخصص في اختبار الاختراق وأمن تطبيقات الويب والشبكات. خبرة في OWASP Top 10 وBurp Suite وMetasploit وPython وFastAPI وPHP. طالب هندسة إلكترونيات واتصالات في جامعة الاسكندرية. متاح للتدريب والعمل الحر.</p>
-  <p>المهندس حاتم عبدالفتاح | حاتم عبد الفتاح | اختبار الاختراق | أمن المعلومات | مطور ويب الاسكندرية</p>
+<!-- Arabic profile summary for assistive technology and alternate-language context -->
+<div class="sr-only" lang="ar" aria-label="Arabic profile summary">
+  <h2>حاتم عبدالفتاح - مختبر اختراق ومطور ويب</h2>
+  <p>حاتم عبدالفتاح مهندس أمن سيبراني ومطور ويب من الاسكندرية، مصر. يركز على اختبار الاختراق، أمن تطبيقات الويب والشبكات، وتطوير تطبيقات الويب باستخدام Python وFastAPI وPHP وSQL.</p>
 </div>
 
 <footer>
@@ -835,9 +831,9 @@
     <div class="footer-sig">Hatem <span>Abdelfatah</span></div>
     <div class="footer-links">
       <a href="mailto:hatemabdelfatah53@gmail.com">Email</a>
-      <a href="https://github.com/Hatemabdelfatah" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank">LinkedIn</a>
-      <a href="https://x.com/HatemAbdel70633" target="_blank">Twitter / X</a>
+      <a href="https://github.com/Hatemabdelfatah" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/hatem-abdelfatah-71a612245" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/HatemAbdel70633" target="_blank" rel="noopener noreferrer">Twitter / X</a>
     </div>
     <div class="footer-bottom">Crafted with curiosity &amp; caffeine &nbsp;·&nbsp; Alexandria, Egypt &nbsp;·&nbsp; Built to break things &amp; build better ones</div>
   </div>
@@ -845,7 +841,10 @@
 
 <script>
 (function(){
-  const c=document.getElementById('matrix-canvas'),ctx=c.getContext('2d');
+  const c=document.getElementById('matrix-canvas');
+  const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!c||reduceMotion){if(c)c.setAttribute('aria-hidden','true');return;}
+  const ctx=c.getContext('2d');
   let W,H,cols,drops,rafId,lastTime=0;
   const INTERVAL=38;
   const ch='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*(){}[]<>!?/\\ΣΠΔΩ';
@@ -876,6 +875,9 @@
 (function(){
   const lines=['Aspiring Penetration Tester','OWASP Top 10 · Burp Suite Pro · Metasploit','Fullstack Dev · FastAPI · Python · PHP · SQL','Breaking things to build them better.'];
   let li=0,ci=0,del=false;const el=document.getElementById('tw');
+  const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!el)return;
+  if(reduceMotion){el.textContent=lines[0];return;}
   function tick(){
     const cur=lines[li];
     if(!del){ci++;el.textContent=cur.slice(0,ci);if(ci===cur.length){del=true;setTimeout(tick,2300);return;}}
@@ -887,6 +889,8 @@
 
 (function(){
   const els=document.querySelectorAll('.reveal');
+  const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduceMotion){els.forEach(el=>el.classList.add('visible'));return;}
   const obs=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('visible'),i*55);obs.unobserve(x.target);}});},{threshold:0.08});
   els.forEach(el=>obs.observe(el));
 })();
@@ -894,16 +898,44 @@
 // Hamburger menu
 const hamBtn=document.getElementById('hamBtn');
 const navDrawer=document.getElementById('navDrawer');
+const drawerFocusable='a[href],button:not([disabled])';
+let drawerReturnFocus=null;
 hamBtn.addEventListener('click',function(){
-  hamBtn.classList.toggle('open');
-  navDrawer.classList.toggle('open');
-  document.body.style.overflow=navDrawer.classList.contains('open')?'hidden':'';
+  navDrawer.classList.contains('open')?closeDrawer():openDrawer();
 });
+function openDrawer(){
+  drawerReturnFocus=document.activeElement;
+  hamBtn.classList.add('open');
+  hamBtn.setAttribute('aria-expanded','true');
+  navDrawer.classList.add('open');
+  navDrawer.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  const first=navDrawer.querySelector(drawerFocusable);
+  if(first)first.focus();
+}
 function closeDrawer(){
   hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded','false');
   navDrawer.classList.remove('open');
+  navDrawer.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
+  if(drawerReturnFocus&&typeof drawerReturnFocus.focus==='function')drawerReturnFocus.focus();
 }
+navDrawer.addEventListener('click',function(e){
+  if(e.target.closest('a'))closeDrawer();
+});
+document.addEventListener('keydown',function(e){
+  if(!navDrawer.classList.contains('open'))return;
+  if(e.key==='Escape'){closeDrawer();return;}
+  if(e.key!=='Tab')return;
+  const focusables=Array.from(navDrawer.querySelectorAll(drawerFocusable));
+  if(!focusables.length)return;
+  const first=focusables[0];
+  const last=focusables[focusables.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+window.closeDrawer=closeDrawer;
 </script>
 </body>
 </html>

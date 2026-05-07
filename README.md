@@ -1,5 +1,5 @@
-Hatem Abdelfatah Portfolio
+# Hatem Abdelfatah Portfolio
 
-This is my personal portfolio website built with GitHub Pages.
+Personal portfolio website built with GitHub Pages.
 
-🔗 https://hatemabdelfatah.github.io/
+Live site: https://hatemabdelfatah.github.io/
