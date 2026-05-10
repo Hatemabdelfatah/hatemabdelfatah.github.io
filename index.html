@@ -158,7 +158,7 @@
 
 <meta name="application-name" content="Hatem Abdelfatah | حاتم عبدالفتاح"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   :root{
     --bg:#040508;--bg2:#080c10;--green:#00e87a;--green-dim:#00b85f;
@@ -361,14 +361,16 @@
   .avail{font-family:var(--mono);font-size:.84rem;color:var(--green);letter-spacing:.1em;display:flex;align-items:center;justify-content:center;gap:.5rem}
   .adot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 
-  .name-byline{padding:2.25rem 2rem 0;position:relative;z-index:2;text-align:center}
-  .name-byline-inner{max-width:1100px;margin:0 auto;padding-bottom:2rem;border-bottom:1px solid var(--border)}
-  .name-byline-ar{margin:0;font-family:system-ui,"Segoe UI","Noto Sans Arabic",Tahoma,sans-serif;font-size:clamp(1.2rem,3.2vw,1.65rem);font-weight:600;color:var(--cyan-dim);letter-spacing:.03em;line-height:1.4}
-
   footer{border-top:1px solid var(--border);padding:2.5rem 2rem;padding-bottom:max(2.5rem,calc(2.5rem + env(safe-area-inset-bottom)));padding-left:max(2rem,env(safe-area-inset-left));padding-right:max(2rem,env(safe-area-inset-right));text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--text-dim);letter-spacing:.06em;position:relative;z-index:2}
   .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem}
   .footer-sig{font-family:var(--head);font-size:1.05rem;font-weight:700;color:var(--text-bright);letter-spacing:.04em}
-  .footer-sig span{color:var(--green)}
+  .footer-sig-bilingual{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.35rem .75rem;line-height:1.35}
+  .footer-name-en{white-space:nowrap}
+  .footer-name-accent{color:var(--green)}
+  .footer-name-sep{color:var(--text-dim);font-weight:400;opacity:.85;padding:0 .15rem}
+  .footer-name-ar{font-family:'Cairo',system-ui,"Segoe UI","Noto Sans Arabic",Tahoma,sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.14em;word-spacing:.2em;font-feature-settings:'kern' 1;white-space:nowrap;color:inherit}
+  .footer-name-ar-given{color:var(--text-bright)}
+  .footer-name-ar .footer-name-accent{font-weight:700}
   .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
   .footer-links a{font-family:var(--mono);font-size:.72rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
   .footer-links a:hover{color:var(--green)}
@@ -387,7 +389,6 @@
 
   @media(max-width:768px){
     html{font-size:15px}
-    .name-byline{padding-left:1.2rem;padding-right:1.2rem}
     nav{padding:.75rem 1.2rem}
     .nav-links,.nav-cta{display:none}
     .nav-ham{display:flex}
@@ -452,6 +453,7 @@
     .cc{flex-direction:column;gap:.45rem}
     .sc{padding:.6rem .75rem}
     .sn2{font-size:1.5rem}
+    .footer-name-ar{font-size:.95rem}
     .footer-links{gap:.55rem;flex-wrap:wrap;justify-content:center}
     .footer-bottom{font-size:.6rem;letter-spacing:.04em;text-align:center}
     .div{margin:2.5rem 0}
@@ -825,16 +827,13 @@
   </div>
 </section>
 
-<!-- Arabic name (end of page — not duplicated in About) -->
-<section class="name-byline reveal" aria-label="Arabic name">
-  <div class="name-byline-inner">
-    <p class="name-byline-ar" lang="ar" dir="rtl">حاتم عبدالفتاح</p>
-  </div>
-</section>
-
 <footer>
   <div class="footer-inner">
-    <div class="footer-sig">Hatem <span>Abdelfatah</span></div>
+    <div class="footer-sig footer-sig-bilingual">
+      <span class="footer-name-en">Hatem <span class="footer-name-accent">Abdelfatah</span></span>
+      <span class="footer-name-sep" aria-hidden="true">|</span>
+      <span class="footer-name-ar" lang="ar" dir="rtl"><span class="footer-name-ar-given">حاتم</span> <span class="footer-name-accent">عبدالفتاح</span></span>
+    </div>
     <div class="footer-links">
       <a href="mailto:hatemabdelfatah53@gmail.com">Email</a>
       <a href="https://github.com/Hatemabdelfatah" target="_blank" rel="noopener noreferrer">GitHub</a>
