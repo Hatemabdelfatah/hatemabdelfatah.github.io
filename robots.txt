@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
+Allow: /assets/
 
+# Block nothing — this is a public portfolio
+Disallow:
+
+# Sitemap location
 Sitemap: https://hatemabdelfatah.github.io/sitemap.xml
+
+# Explicitly invite major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
